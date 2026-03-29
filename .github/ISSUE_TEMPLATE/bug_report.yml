@@ -1,0 +1,57 @@
+name: Zgłoszenie błędu
+description: Coś nie działa poprawnie
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Przed zgłoszeniem sprawdź, czy issue już istnieje w [otwartych zgłoszeniach](https://github.com/wielorzeczownik/vscode-polishc/issues).
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Co się dzieje?
+      description: Jasny opis błędu.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Czego się spodziewałeś?
+    validations:
+      required: true
+
+  - type: input
+    id: vscode_version
+    attributes:
+      label: Wersja VS Code
+      placeholder: "np. 1.110.0"
+    validations:
+      required: true
+
+  - type: input
+    id: extension_version
+    attributes:
+      label: Wersja rozszerzenia
+      placeholder: "np. v0.1.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: System operacyjny
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logi
+      description: Wklej ewentualne błędy z Output → Polish C (clangd).
+      render: text

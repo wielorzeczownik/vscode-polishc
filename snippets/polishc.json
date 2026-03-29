@@ -1,0 +1,100 @@
+{
+  "Funkcja główna": {
+    "prefix": "noelo",
+    "body": ["calkowita noelo() {", "\t$0", "\tkurwa cieplo;", "}"],
+    "description": "Funkcja główna programu (main)"
+  },
+  "Jeżeli": {
+    "prefix": ["jezeli", "jesli"],
+    "body": ["jezeli (${1:warunek}) {", "\t$0", "}"],
+    "description": "Instrukcja warunkowa (if)"
+  },
+  "Jeżeli-albo": {
+    "prefix": ["jezeli-albo", "jesli-albo"],
+    "body": ["jezeli (${1:warunek}) {", "\t$2", "} albo {", "\t$0", "}"],
+    "description": "Instrukcja warunkowa z gałęzią else (if-else)"
+  },
+  "Dopóki": {
+    "prefix": "dopoki",
+    "body": ["dopoki (${1:warunek}) {", "\t$0", "}"],
+    "description": "Pętla while"
+  },
+  "Dla": {
+    "prefix": "dla",
+    "body": [
+      "dla (calkowita ${1:i} = 0; ${1:i} < ${2:n}; ${1:i}++) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Pętla for"
+  },
+  "Rób-dopóki": {
+    "prefix": "rob",
+    "body": ["rob {", "\t$0", "} dopoki (${1:warunek});"],
+    "description": "Pętla do-while"
+  },
+  "Struktura": {
+    "prefix": "struktura",
+    "body": ["struktura ${1:NazwaTypu} {", "\t$0", "};"],
+    "description": "Definicja struktury (struct)"
+  },
+  "Typedef struktura": {
+    "prefix": "ototypu-struktura",
+    "body": ["ototypu struktura {", "\t$0", "} ${1:NazwaTypu};"],
+    "description": "Typedef struct"
+  },
+  "Wypisz": {
+    "prefix": "wypisz",
+    "body": "wypisz(\"${1:%s}\\n\"${2:, ${3:zmienna}});",
+    "description": "Wypisz na ekran (printf)"
+  },
+  "Czytaj": {
+    "prefix": "czytaj",
+    "body": "czytaj(\"${1:%d}\", &${2:zmienna});",
+    "description": "Wczytaj od użytkownika (scanf)"
+  },
+  "Deklaracja zmiennej całkowitej": {
+    "prefix": "calkowita",
+    "body": "calkowita ${1:nazwa} = ${2:0};",
+    "description": "Deklaracja zmiennej int"
+  },
+  "Deklaracja zmiennej float": {
+    "prefix": "zmiennoprzecinkowa",
+    "body": "zmiennoprzecinkowa ${1:nazwa} = ${2:0.0};",
+    "description": "Deklaracja zmiennej float"
+  },
+  "Deklaracja znaku": {
+    "prefix": "znak",
+    "body": "znak ${1:nazwa} = '${2: }';",
+    "description": "Deklaracja zmiennej char"
+  },
+  "Include": {
+    "prefix": "#include",
+    "body": "#include <${1:stdio.h}>",
+    "description": "Dyrektywa include"
+  },
+  "Include polishc": {
+    "prefix": "polishc",
+    "body": [
+      "#include \"polishc.h\"",
+      "#include \"polishc_stdio.h\"",
+      "",
+      "$0"
+    ],
+    "description": "Importuj nagłówki Polish C"
+  },
+  "Cały program": {
+    "prefix": "program",
+    "body": [
+      "#include <stdio.h>",
+      "#include \"polishc.h\"",
+      "#include \"polishc_stdio.h\"",
+      "",
+      "calkowita noelo() {",
+      "\t$0",
+      "\tkurwa cieplo;",
+      "}"
+    ],
+    "description": "Szkielet całego programu Polish C"
+  }
+}

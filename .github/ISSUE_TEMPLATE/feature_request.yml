@@ -1,0 +1,25 @@
+name: Propozycja funkcji
+description: Zaproponuj ulepszenie lub nową funkcjonalność
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Jaki problem to rozwiązuje?
+      description: Opisz przypadek użycia lub ograniczenie, na które trafiasz.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proponowane rozwiązanie
+      description: Jak miałoby to działać?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Rozważane alternatywy
+      description: Inne podejścia, które brałeś pod uwagę?

@@ -1,0 +1,77 @@
+{
+  "name": "polishc",
+  "displayName": "polishc",
+  "description": "Podświetlanie składni i podpowiedzi dla Polish C",
+  "version": "0.0.1",
+  "publisher": "wielorzeczownik",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wielorzeczownik/vscode-polishc"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "polishc",
+        "aliases": [
+          "Polish C",
+          "polishc"
+        ],
+        "extensions": [
+          ".c",
+          ".h",
+          ".pc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "polishc",
+        "scopeName": "source.polishc",
+        "path": "./syntaxes/polishc.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "polishc",
+        "path": "./snippets/polishc.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "vite build",
+    "compile": "vite build",
+    "build": "vsce package --out polishc.vsix",
+    "watch": "vite build --watch",
+    "lint": "eslint src",
+    "format": "prettier --write src vite.config.ts",
+    "format:check": "prettier --check src vite.config.ts",
+    "fix": "eslint --fix src && prettier --write src vite.config.ts"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "3.7.1",
+    "@types/node": "25.5.0",
+    "@types/vscode": "1.110.0",
+    "eslint": "10.1.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-simple-import-sort": "12.1.1",
+    "eslint-plugin-sonarjs": "4.0.2",
+    "eslint-plugin-unicorn": "64.0.0",
+    "jiti": "^2.6.1",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.57.2",
+    "vite": "8.0.3"
+  },
+  "dependencies": {
+    "vscode-languageclient": "9.0.1"
+  }
+}

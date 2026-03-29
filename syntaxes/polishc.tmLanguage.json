@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "polishc",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#preprocessor" },
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#constants" },
+    { "include": "#functions" },
+    { "include": "#strings" },
+    { "include": "#numbers" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.polishc",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.polishc",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "preprocessor": {
+      "patterns": [
+        {
+          "name": "meta.preprocessor.polishc keyword.control.import.polishc",
+          "match": "^\\s*#\\s*(include|define|undef|if|ifdef|ifndef|elif|else|endif|pragma|error|warning)\\b.*$"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.polishc",
+          "match": "\\b(jezeli|jesli|jeżeli|jeśli|albo|dopoki|dopóki|dla|rob|rób|przerwij|kontynuuj|if|else|while|for|do|break|continue|switch|case|default|goto)\\b"
+        },
+        {
+          "name": "keyword.other.return.polishc",
+          "match": "\\b(kurwa|itojestjakbyok|nara|zegnam|żegnam|dawaj|return)\\b"
+        },
+        {
+          "name": "keyword.other.polishc",
+          "match": "\\b(struktura|ototypu|jednosc|jedność|sizeof|typedef|struct|union|enum|extern|static|const|volatile|inline|register)\\b"
+        },
+        {
+          "name": "entity.name.function.special.polishc",
+          "match": "\\b(noelo|main)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.polishc",
+          "match": "\\b(calkowita|całkowita|zmiennoprzecinkowa|zmiennoprzecinkowaalewiększa|znak|nic|dluga|długa|prawdaczyfalsz|prawdaczyfałsz|int|float|double|char|void|long|short|unsigned|signed|bool|size_t)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.polishc",
+          "match": "\\b(smieciie|śmiecie|cieplo|ciepło|ozieble|ozięble|NULL|TRUE|FALSE|true|false)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.polishc",
+          "match": "\\b(wypisz|swypisz|czytaj|printf|sprintf|scanf|fprintf|sscanf|malloc|free|calloc|realloc|strlen|strcpy|strcat|strcmp|memset|memcpy)\\b"
+        },
+        {
+          "name": "entity.name.function.polishc",
+          "match": "\\b([a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ_][a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ0-9_]*)\\s*(?=\\()"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.polishc",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.polishc",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.polishc",
+          "match": "\\b(0x[0-9a-fA-F]+|0[0-7]*|[0-9]+(\\.[0-9]+)?([eE][+-]?[0-9]+)?[fFlLuU]*)\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.polishc"
+}
