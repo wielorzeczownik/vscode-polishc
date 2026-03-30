@@ -1,4 +1,4 @@
-<h1 align="center">Polish C - rozszerzenie VS Code</h1>
+<h1 align="center">VS Code Polish C</h1>
 
 <p align="center">
   <a href="https://github.com/wielorzeczownik/vscode-polishc/actions/workflows/release.yml"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/actions/workflow/status/wielorzeczownik/vscode-polishc/release.yml?style=flat-square&labelColor=2d333b&color=3fb950"/><source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/actions/workflow/status/wielorzeczownik/vscode-polishc/release.yml?style=flat-square&color=2ea043"/><img src="https://img.shields.io/github/actions/workflow/status/wielorzeczownik/vscode-polishc/release.yml?style=flat-square&labelColor=2d333b&color=3fb950" alt="Build"/></picture></a> <a href="https://github.com/wielorzeczownik/vscode-polishc/releases/latest"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/v/release/wielorzeczownik/vscode-polishc?style=flat-square&labelColor=2d333b&color=3fb950"/><source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/v/release/wielorzeczownik/vscode-polishc?style=flat-square&color=2ea043"/><img src="https://img.shields.io/github/v/release/wielorzeczownik/vscode-polishc?style=flat-square&labelColor=2d333b&color=3fb950" alt="Najnowsze wydanie"/></picture></a> <a href="https://github.com/wielorzeczownik/vscode-polishc/blob/main/LICENSE"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/Licencja-MIT-3fb950?style=flat-square&labelColor=2d333b"/><source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/Licencja-MIT-2ea043?style=flat-square"/><img src="https://img.shields.io/badge/Licencja-MIT-3fb950?style=flat-square&labelColor=2d333b" alt="Licencja: MIT"/></picture></a>
@@ -13,7 +13,8 @@
   Podświetlanie składni, autouzupełnianie, dokumentacja inline, podpowiedzi parametrów i integracja z clangd.
 </p>
 
-> **Uwaga:** Ten projekt jest ciekawostką - powstał dla zabawy i raczej nie będzie aktywnie rozwijany. Działa, robi co ma robić, zależności są aktualizowane automatycznie przez Renovate. PR-y mile widziane, ale bez gwarancji szybkiej reakcji.
+> [!NOTE]
+> Ten projekt jest ciekawostką - powstał dla zabawy i raczej nie będzie aktywnie rozwijany. Działa, robi co ma robić, zależności są aktualizowane automatycznie przez Renovate. PR-y mile widziane, ale bez gwarancji szybkiej reakcji.
 
 ---
 
