@@ -2,7 +2,7 @@
   "name": "polishc",
   "displayName": "polishc",
   "description": "Podświetlanie składni i podpowiedzi dla Polish C",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "wielorzeczownik",
   "repository": {
     "type": "git",
