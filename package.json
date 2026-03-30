@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/wielorzeczownik/vscode-polishc"
   },
-  "license": "MIT",
+  "license": "WTFPL",
   "engines": {
     "vscode": "^1.110.0"
   },
