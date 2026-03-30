@@ -112,12 +112,5 @@ Wymagania: [Node.js](https://nodejs.org) 24+, [clangd](https://clangd.llvm.org/i
 git clone https://github.com/wielorzeczownik/vscode-polishc.git
 cd polishc
 npm install
-npm run compile
-```
-
-Aby spakować jako `.vsix`:
-
-```bash
-npm run compile
-npx @vscode/vsce package
+npm run build
 ```
