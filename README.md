@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  Rozszerzenie VS Code dla Polish C dialektu języka C z polskimi słowami kluczowymi.<br/>
+  Rozszerzenie VS Code dla Polish C <s>dialektu</s> wariantu języka C z polskimi słowami kluczowymi.<br/>
   Podświetlanie składni, autouzupełnianie, dokumentacja inline, podpowiedzi parametrów i integracja z clangd.
 </p>
 
@@ -22,7 +22,7 @@
 
 Polish C to wariant języka C, w którym angielskie słowa kluczowe zastąpiono polskimi odpowiednikami. Zamiast pisać `int`, `while`, `if` czy `printf`, piszesz `calkowita`, `dopoki`, `jezeli` i `wypisz`. To rozszerzenie zapewnia pełne wsparcie IDE dla Polish C w Visual Studio Code.
 
-Dialekt stworzony przez [npc-tom](https://github.com/npc-tom/polishc).
+<s>Dialekt</s> Wariant stworzony przez [npc-tom](https://github.com/npc-tom/polishc).
 
 ---
 
