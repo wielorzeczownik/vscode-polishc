@@ -299,7 +299,7 @@ export const items: CompletionEntry[] = [
 
   // entry point
   {
-    label: { label: 'noelo', detail: '()', description: 'main' },
+    label: { label: 'noelo', detail: ' {}', description: 'main' },
     kind: Kind.Function,
     doc: makeMarkdown(
       'funkcja noelo\npunkt wejścia programu\n\n `calkowita`\n\n`noelo`'
