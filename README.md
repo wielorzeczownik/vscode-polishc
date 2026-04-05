@@ -14,15 +14,11 @@ Podświetlanie składni, autouzupełnianie, dokumentacja inline, podpowiedzi par
 > [!NOTE]
 > Ten projekt jest ciekawostką – powstał dla zabawy i raczej nie będzie aktywnie rozwijany. Działa, robi co ma robić, zależności są aktualizowane automatycznie przez Renovate. PR-y mile widziane, ale bez gwarancji szybkiej reakcji.
 
----
-
 ## Czym jest Polish C?
 
 Polish C to wariant języka C, w którym angielskie słowa kluczowe zastąpiono polskimi odpowiednikami. Zamiast pisać `int`, `while`, `if` czy `printf`, piszesz `calkowita`, `dopoki`, `jezeli` i `wypisz`. To rozszerzenie zapewnia pełne wsparcie IDE dla Polish C w Visual Studio Code.
 
 <s>Dialekt</s> Wariant stworzony przez [npc-tom](https://github.com/npc-tom/polishc).
-
----
 
 ## Funkcje
 
@@ -31,8 +27,6 @@ Polish C to wariant języka C, w którym angielskie słowa kluczowe zastąpiono 
 - **Dokumentacja inline** – opis każdego słowa kluczowego, typu i funkcji wyświetlany po najechaniu kursorem
 - **Podpowiedzi parametrów** – wskazówki przy wywołaniu `wypisz`, `czytaj`, `swypisz` i innych funkcji
 - **Sprawdzanie typów przez clangd** – pełne wsparcie LSP z nazwami typów C przetłumaczonymi na polski
-
----
 
 ## Instalacja
 
@@ -45,8 +39,6 @@ Lub przez terminal:
 ```bash
 code --install-extension polishc.vsix
 ```
-
----
 
 ## Słowa kluczowe
 
@@ -84,8 +76,6 @@ code --install-extension polishc.vsix
 | `swypisz(bufor, format, ...)` | `sprintf` |
 | `noelo()`                     | `main`    |
 
----
-
 ## Sprawdzanie typów (opcjonalne)
 
 Aby korzystać ze sprawdzania typów i pełnego wsparcia LSP, zainstaluj [clangd](https://clangd.llvm.org/installation):
@@ -99,8 +89,6 @@ sudo apt install clangd
 ```
 
 Rozszerzenie wykrywa clangd automatycznie. Bez niego podświetlanie składni i autouzupełnianie nadal działają.
-
----
 
 ## Budowanie ze źródeł
 
