@@ -8,10 +8,8 @@
   <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C"/>
 </p>
 
-<p align="center">
-  Rozszerzenie VS Code dla Polish C <s>dialektu</s> wariantu języka C z polskimi słowami kluczowymi.<br/>
-  Podświetlanie składni, autouzupełnianie, dokumentacja inline, podpowiedzi parametrów i integracja z clangd.
-</p>
+Rozszerzenie VS Code dla Polish C <s>dialektu</s> wariantu języka C z polskimi słowami kluczowymi.<br/>
+Podświetlanie składni, autouzupełnianie, dokumentacja inline, podpowiedzi parametrów i integracja z clangd.
 
 > [!NOTE]
 > Ten projekt jest ciekawostką – powstał dla zabawy i raczej nie będzie aktywnie rozwijany. Działa, robi co ma robić, zależności są aktualizowane automatycznie przez Renovate. PR-y mile widziane, ale bez gwarancji szybkiej reakcji.
