@@ -14,7 +14,7 @@
 </p>
 
 > [!NOTE]
-> Ten projekt jest ciekawostką - powstał dla zabawy i raczej nie będzie aktywnie rozwijany. Działa, robi co ma robić, zależności są aktualizowane automatycznie przez Renovate. PR-y mile widziane, ale bez gwarancji szybkiej reakcji.
+> Ten projekt jest ciekawostką – powstał dla zabawy i raczej nie będzie aktywnie rozwijany. Działa, robi co ma robić, zależności są aktualizowane automatycznie przez Renovate. PR-y mile widziane, ale bez gwarancji szybkiej reakcji.
 
 ---
 
@@ -28,11 +28,11 @@ Polish C to wariant języka C, w którym angielskie słowa kluczowe zastąpiono 
 
 ## Funkcje
 
-- **Podświetlanie składni** - polskie słowa kluczowe, typy, operatory i literały poprawnie kolorowane
-- **Autouzupełnianie** - podpowiedzi dla wszystkich słów kluczowych, typów i funkcji standardowych z opisami
-- **Dokumentacja inline** - opis każdego słowa kluczowego, typu i funkcji wyświetlany po najechaniu kursorem
-- **Podpowiedzi parametrów** - wskazówki przy wywołaniu `wypisz`, `czytaj`, `swypisz` i innych funkcji
-- **Sprawdzanie typów przez clangd** - pełne wsparcie LSP z nazwami typów C przetłumaczonymi na polski
+- **Podświetlanie składni** – polskie słowa kluczowe, typy, operatory i literały poprawnie kolorowane
+- **Autouzupełnianie** – podpowiedzi dla wszystkich słów kluczowych, typów i funkcji standardowych z opisami
+- **Dokumentacja inline** – opis każdego słowa kluczowego, typu i funkcji wyświetlany po najechaniu kursorem
+- **Podpowiedzi parametrów** – wskazówki przy wywołaniu `wypisz`, `czytaj`, `swypisz` i innych funkcji
+- **Sprawdzanie typów przez clangd** – pełne wsparcie LSP z nazwami typów C przetłumaczonymi na polski
 
 ---
 
@@ -54,37 +54,37 @@ code --install-extension polishc.vsix
 
 ### Kontrola przepływu
 
-| Polish C | C |
-|---|---|
-| `jezeli` / `jeżeli` / `jesli` / `jeśli` | `if` |
-| `albo` | `else` |
-| `dopoki` / `dopóki` | `while` |
-| `dla` | `for` |
-| `rob` / `rób` | `do` |
-| `przerwij` | `break` |
-| `kontynuuj` | `continue` |
-| `kurwa` / `nara` / `dawaj` | `return` |
+| Polish C                                | C          |
+| --------------------------------------- | ---------- |
+| `jezeli` / `jeżeli` / `jesli` / `jeśli` | `if`       |
+| `albo`                                  | `else`     |
+| `dopoki` / `dopóki`                     | `while`    |
+| `dla`                                   | `for`      |
+| `rob` / `rób`                           | `do`       |
+| `przerwij`                              | `break`    |
+| `kontynuuj`                             | `continue` |
+| `kurwa` / `nara` / `dawaj`              | `return`   |
 
 ### Typy
 
-| Polish C | C |
-|---|---|
-| `calkowita` / `całkowita` | `int` |
-| `znak` | `char` |
-| `zmiennoprzecinkowa` | `float` |
+| Polish C                       | C        |
+| ------------------------------ | -------- |
+| `calkowita` / `całkowita`      | `int`    |
+| `znak`                         | `char`   |
+| `zmiennoprzecinkowa`           | `float`  |
 | `zmiennoprzecinkowaalewiększa` | `double` |
-| `dluga` / `długa` | `long` |
-| `nic` | `void` |
-| `prawdaczyfalsz` | `bool` |
+| `dluga` / `długa`              | `long`   |
+| `nic`                          | `void`   |
+| `prawdaczyfalsz`               | `bool`   |
 
 ### Funkcje standardowe
 
-| Polish C | C |
-|---|---|
-| `wypisz(format, ...)` | `printf` |
-| `czytaj(format, ...)` | `scanf` |
+| Polish C                      | C         |
+| ----------------------------- | --------- |
+| `wypisz(format, ...)`         | `printf`  |
+| `czytaj(format, ...)`         | `scanf`   |
 | `swypisz(bufor, format, ...)` | `sprintf` |
-| `noelo()` | `main` |
+| `noelo()`                     | `main`    |
 
 ---
 
