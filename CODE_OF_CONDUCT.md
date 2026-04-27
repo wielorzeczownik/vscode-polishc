@@ -24,7 +24,7 @@ Przykłady niedopuszczalnych zachowań:
 
 ## Egzekwowanie
 
-Przypadki obraźliwego lub niedopuszczalnego zachowania można zgłaszać otwierając [issue](https://github.com/wielorzeczownik/vscode-polishc/issues) lub kontaktując się bezpośrednio z opiekunami przez GitHub. Wszystkie skargi będą rozpatrywane i zbadane.
+Przypadki obraźliwego lub niedopuszczalnego zachowania można zgłaszać prywatnie, kontaktując się bezpośrednio z opiekunem przez [github.com/wielorzeczownik](https://github.com/wielorzeczownik). Nie otwieraj publicznego issue. Wszystkie skargi będą rozpatrywane i zbadane, a odpowiedź zostanie udzielona stosownie do okoliczności.
 
 ## Atrybucja
 

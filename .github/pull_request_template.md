@@ -12,9 +12,16 @@
 
 ## Checklist
 
-- [ ] `npm run lint` przechodzi
-- [ ] `npm run format:check` przechodzi
-- [ ] `npm run build` przechodzi
+<!-- Zaznacz tylko to, co dotyczy tego PR -->
+
+- [ ] `npm run format:check` przechodzi — jeśli zmieniono `.ts`
+- [ ] `npm run lint` przechodzi — jeśli zmieniono `.ts`
+- [ ] `npm run typecheck` przechodzi — jeśli zmieniono `.ts`
+- [ ] `npm run compile` przechodzi — jeśli zmieniono `.ts`
+- [ ] `npm audit` przechodzi — jeśli zmieniono `package-lock.json`
+- [ ] Skrypty shell sformatowane (`shfmt --diff scripts/`) — jeśli zmieniono `.sh`
+- [ ] Markdown lintuje się poprawnie — jeśli zmieniono `.md`
+- [ ] Zaktualizowano dokumentację (README, CONTRIBUTING)
 
 ## Powiązane issue
 
