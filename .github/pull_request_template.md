@@ -21,7 +21,7 @@
 - [ ] `npm audit` przechodzi — jeśli zmieniono `package-lock.json`
 - [ ] Skrypty shell sformatowane (`shfmt --diff scripts/`) — jeśli zmieniono `.sh`
 - [ ] Markdown lintuje się poprawnie — jeśli zmieniono `.md`
-- [ ] Zaktualizowano dokumentację (README, CONTRIBUTING)
+- [ ] Zaktualizowano dokumentację
 
 ## Powiązane issue
 
