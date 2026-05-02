@@ -1,13 +1,21 @@
 # Contributing to vscode-polishc
 
-Ten projekt jest ciekawostką i nie jest aktywnie rozwijany - PR-y są mile widziane, ale bez gwarancji szybkiej odpowiedzi.
+Dziękujemy za rozważenie kontrybucji. Ten dokument zawiera wszystko, czego potrzebujesz, żeby zacząć.
 
-## Wymagania
+## Przegląd
 
-- [Node.js](https://nodejs.org/) 24+
-- [shfmt](https://github.com/mvdan/sh)
-- [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
-- [clangd](https://clangd.llvm.org/installation) (opcjonalnie, do testowania integracji LSP)
+Rozszerzenie VS Code dodające podświetlanie składni, snippety i wsparcie LSP dla języka Polish C.
+
+## Struktura projektu
+
+```text
+.
+├── src/                     kod źródłowy rozszerzenia (TypeScript)
+├── syntaxes/                gramatyka TextMate do podświetlania składni
+├── snippets/                snippety kodu
+└── scripts/
+    └── bump-version.sh      wyznacza kolejną wersję release i bumpuje package.json
+```
 
 ## Konfiguracja środowiska
 
@@ -17,26 +25,22 @@ cd vscode-polishc
 npm install
 ```
 
-## Struktura projektu
-
-- `src/` – kod źródłowy rozszerzenia (TypeScript)
-- `syntaxes/` – gramatyka TextMate do podświetlania składni
-- `snippets/` – snippety kodu
-- `scripts/bump-version.sh` – wyznacza kolejną wersję release na podstawie git-cliff i bumpuje `package.json`
-
-## Przed wysłaniem PR
-
-Upewnij się, że te komendy przechodzą lokalnie.
+## Uruchamianie sprawdzeń lokalnie
 
 ### Z narzędziami zainstalowanymi lokalnie
 
 ```bash
+# TypeScript
 npm run format:check
 npm run lint
 npm run typecheck
 npm run compile
 npm audit
+
+# Shell
 shfmt --diff scripts/
+
+# Markdown
 markdownlint-cli2 "**/*.md"
 ```
 
@@ -54,15 +58,17 @@ Projekt używa [Conventional Commits](https://www.conventionalcommits.org/). Wia
 
 | Prefix      | Kiedy używać                        |
 | ----------- | ----------------------------------- |
-| `feat:`     | Nowa funkcja                        |
+| `feat:`     | Nowa funkcja lub zachowanie         |
 | `fix:`      | Naprawa błędu                       |
+| `test:`     | Dodawanie lub aktualizacja testów   |
 | `chore:`    | Utrzymanie, aktualizacje zależności |
 | `refactor:` | Zmiana kodu bez zmiany zachowania   |
 | `docs:`     | Tylko dokumentacja                  |
-| `style:`    | Formatowanie, bez zmian logiki      |
 | `ci:`       | Zmiany CI/CD                        |
 
 Breaking changes muszą zawierać `BREAKING CHANGE:` w stopce commita.
+
+Trzymaj commity skupione na jednej rzeczy. Jeśli zmiana dotyczy zarówno logiki, jak i testów, jeden commit wystarczy.
 
 ## Pull requesty
 

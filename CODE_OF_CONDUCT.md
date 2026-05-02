@@ -10,7 +10,6 @@ Przykłady zachowań sprzyjających pozytywnemu środowisku:
 
 - Używanie przyjaznego i inkluzywnego języka
 - Szanowanie odmiennych punktów widzenia i doświadczeń
-- Graceful przyjmowanie konstruktywnej krytyki
 - Skupianie się na tym, co jest najlepsze dla społeczności
 - Okazywanie empatii innym członkom społeczności
 
