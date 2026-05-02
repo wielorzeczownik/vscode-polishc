@@ -60,7 +60,7 @@ jobs:
         with:
           add: 'package-lock.json'
           default_author: github_actions
-          message: "fix(deps): resolve audit advisories"
+          message: 'fix(deps): resolve audit advisories'
           push: true
 
       - name: Commit fix (dev-only vulnerabilities)
@@ -69,5 +69,5 @@ jobs:
         with:
           add: 'package-lock.json'
           default_author: github_actions
-          message: "build(deps): resolve audit advisories"
+          message: 'build(deps): resolve audit advisories'
           push: true
