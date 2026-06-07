@@ -10,7 +10,7 @@
   },
   "license": "WTFPL",
   "engines": {
-    "vscode": "^1.110.0"
+    "vscode": "^1.120.0"
   },
   "categories": [
     "Programming Languages"
