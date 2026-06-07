@@ -58,7 +58,7 @@
     "fix": "eslint --fix src && prettier --write src vite.config.ts"
   },
   "devDependencies": {
-    "@vscode/vsce": "3.9.1",
+    "@vscode/vsce": "3.9.2",
     "@types/node": "25.9.1",
     "@types/vscode": "1.120.0",
     "eslint": "10.4.1",
