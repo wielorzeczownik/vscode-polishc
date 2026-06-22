@@ -3,14 +3,14 @@ import { window, workspace } from 'vscode';
 import type { LanguageClient } from 'vscode-languageclient/node';
 
 import { startClangd } from '@/clangd';
-import { areHeadersMissing, ensurePolishCHeaders } from '@/headers';
+import { ensurePolishCHeaders, isHeadersMissing } from '@/headers';
 import {
   registerCompletionProvider,
   registerHoverProvider,
   registerSignatureProvider,
 } from '@/providers';
 
-let clangdClient: LanguageClient | undefined;
+const state: { clangdClient?: LanguageClient } = {};
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const providers: Disposable[] = [
@@ -24,7 +24,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   const projectPath = workspace.workspaceFolders?.[0]?.uri.fsPath;
   if (projectPath) {
     try {
-      if (areHeadersMissing(projectPath)) {
+      if (isHeadersMissing(projectPath)) {
         const answer = await window.showInformationMessage(
           'Polish C: Czy pobrać nagłówki (.h) do projektu? Wymagane do podpowiedzi typów.',
           'Tak',
@@ -41,10 +41,10 @@ export async function activate(context: ExtensionContext): Promise<void> {
     }
   }
 
-  clangdClient = startClangd(context, headersPath);
+  state.clangdClient = startClangd(context, headersPath);
 }
 
 export async function deactivate(): Promise<void> {
   // sprzątamy po sobie
-  await clangdClient?.stop();
+  await state.clangdClient?.stop();
 }

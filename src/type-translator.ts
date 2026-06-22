@@ -19,20 +19,21 @@ export function polishifyTypes(text: string): string {
       if (line.trimStart().startsWith('#define')) return line;
       let result = line;
       for (const [pattern, replacement] of TYPE_MAP) {
-        result = result.replace(pattern, replacement);
+        result = result.replace(pattern, () => replacement);
       }
       return result;
     })
     .join('\n');
 }
 
-function translateDoc(
-  doc: string | MarkdownString | undefined
+function translateDocument(
+  document: string | MarkdownString | undefined
 ): MarkdownString | undefined {
-  if (!doc) return undefined;
-  if (typeof doc === 'string') return new MarkdownString(polishifyTypes(doc));
-  const markdown = new MarkdownString(polishifyTypes(doc.value));
-  markdown.isTrusted = doc.isTrusted;
+  if (!document) return undefined;
+  if (typeof document === 'string')
+    return new MarkdownString(polishifyTypes(document));
+  const markdown = new MarkdownString(polishifyTypes(document.value));
+  markdown.isTrusted = document.isTrusted;
   return markdown;
 }
 
@@ -47,14 +48,17 @@ export function translateSignature(
 ): SignatureInformation {
   const out = new SignatureInformation(
     polishifyTypes(sig.label),
-    translateDoc(sig.documentation)
+    translateDocument(sig.documentation)
   );
-  out.parameters = sig.parameters.map((param) => {
+  out.parameters = sig.parameters.map((parameter) => {
     const label =
-      typeof param.label === 'string'
-        ? polishifyTypes(param.label)
-        : param.label;
-    return new ParameterInformation(label, translateDoc(param.documentation));
+      typeof parameter.label === 'string'
+        ? polishifyTypes(parameter.label)
+        : parameter.label;
+    return new ParameterInformation(
+      label,
+      translateDocument(parameter.documentation)
+    );
   });
   return out;
 }
@@ -65,6 +69,6 @@ export function translateItem<
   return {
     ...item,
     detail: item.detail ? polishifyTypes(item.detail) : item.detail,
-    documentation: translateDoc(item.documentation),
+    documentation: translateDocument(item.documentation),
   };
 }

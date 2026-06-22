@@ -1,12 +1,12 @@
 import type { CompletionItemKind, MarkdownString } from 'vscode';
 
 export interface CompletionEntry {
-  label: { label: string; detail?: string; description?: string } | string;
+  label: string | { label: string; detail?: string; description?: string };
   kind: CompletionItemKind;
   doc?: MarkdownString;
 }
 
-export interface SignatureParam {
+export interface SignatureParameter {
   label: string;
   doc: string;
 }
@@ -14,5 +14,5 @@ export interface SignatureParam {
 export interface SignatureEntry {
   label: string;
   doc: string;
-  params: SignatureParam[];
+  params: SignatureParameter[];
 }

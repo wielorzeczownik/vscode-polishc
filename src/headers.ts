@@ -7,24 +7,28 @@ import { HEADERS, REPO_RAW } from '@/constants';
 function fetchText(url: string): Promise<string> {
   return new Promise((resolve, reject) => {
     https
-      .get(url, (res) => {
+      .get(url, (response) => {
         if (
-          (res.statusCode === 301 || res.statusCode === 302) &&
-          res.headers.location
+          (response.statusCode === 301 || response.statusCode === 302) &&
+          response.headers.location
         ) {
-          resolve(fetchText(res.headers.location));
+          resolve(fetchText(response.headers.location));
           return;
         }
         const chunks: Buffer[] = [];
-        res.on('data', (chunk: Buffer) => chunks.push(chunk));
-        res.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
-        res.on('error', reject);
+        response.on('data', (chunk: Buffer) => {
+          chunks.push(chunk);
+        });
+        response.on('end', () =>
+          resolve(Buffer.concat(chunks).toString('utf8'))
+        );
+        response.on('error', reject);
       })
       .on('error', reject);
   });
 }
 
-export function areHeadersMissing(storagePath: string): boolean {
+export function isHeadersMissing(storagePath: string): boolean {
   return HEADERS.some((name) => !existsSync(path.join(storagePath, name)));
 }
 

@@ -25,10 +25,10 @@ import {
 } from '@/type-translator';
 
 function findClangd(): string | undefined {
-  for (const cmd of CLANGD_CANDIDATES) {
+  for (const command of CLANGD_CANDIDATES) {
     try {
-      execFileSync(cmd, ['--version'], { stdio: 'ignore' });
-      return cmd;
+      execFileSync(command, ['--version'], { stdio: 'ignore' });
+      return command;
     } catch {
       // nie znaleziono, próbuj następny
     }
@@ -64,11 +64,10 @@ function createClangdClient(
             /[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ_][a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ0-9_]*/
           );
           const word = range ? document.getText(range) : undefined;
-          const isPolishKeyword = items.some(
-            (entry) =>
-              (typeof entry.label === 'string'
-                ? entry.label
-                : entry.label.label) === word
+          const isPolishKeyword = items.some((entry) =>
+            typeof entry.label === 'string'
+              ? entry.label === word
+              : entry.label.label === word
           );
           // clangd nie zna polskich słów kluczowych
           if (isPolishKeyword) return;

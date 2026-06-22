@@ -34,11 +34,10 @@ export function registerHoverProvider() {
       if (!range) return;
 
       const word = document.getText(range);
-      const item = items.find(
-        (entry) =>
-          (typeof entry.label === 'string'
-            ? entry.label
-            : entry.label.label) === word
+      const item = items.find((entry) =>
+        typeof entry.label === 'string'
+          ? entry.label === word
+          : entry.label.label === word
       );
       if (!item?.doc) return;
 
@@ -62,27 +61,30 @@ export function registerSignatureProvider() {
         const beforeParen = textBefore.slice(0, parenIndex).trimEnd();
         let start = beforeParen.length - 1;
         while (start >= 0 && /\w/.test(beforeParen[start])) start--;
-        const funcName = beforeParen.slice(start + 1);
-        const sig = signatures[funcName];
+        const functionName = beforeParen.slice(start + 1);
+        const sig = signatures[functionName];
         if (!sig) return;
 
-        const argsText = textBefore.slice(parenIndex + 1);
-        const activeParam = argsText.split(',').length - 1;
+        const argumentsText = textBefore.slice(parenIndex + 1);
+        const activeParameter = argumentsText.split(',').length - 1;
 
         const signature = new SignatureInformation(
           sig.label,
           makeMarkdown(sig.doc)
         );
         signature.parameters = sig.params.map(
-          (param) =>
-            new ParameterInformation(param.label, makeMarkdown(param.doc))
+          (parameter) =>
+            new ParameterInformation(
+              parameter.label,
+              makeMarkdown(parameter.doc)
+            )
         );
 
         const help = new SignatureHelp();
         help.signatures = [signature];
         help.activeSignature = 0;
         // clampujemy
-        help.activeParameter = Math.min(activeParam, sig.params.length - 1);
+        help.activeParameter = Math.min(activeParameter, sig.params.length - 1);
         return help;
       },
     },
