@@ -64,12 +64,11 @@ function createClangdClient(
             /[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ_][a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ0-9_]*/
           );
           const word = range ? document.getText(range) : undefined;
-          const isPolishKeyword = items.some(
-            (entry) =>
-              (typeof entry.label === 'string'
-                ? entry.label
-                : entry.label.label) === word
-          );
+          const isPolishKeyword = items.some((entry) => {
+            const label =
+              typeof entry.label === 'string' ? entry.label : entry.label.label;
+            return label === word;
+          });
           // clangd nie zna polskich słów kluczowych
           if (isPolishKeyword) return;
 

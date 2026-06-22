@@ -34,12 +34,11 @@ export function registerHoverProvider() {
       if (!range) return;
 
       const word = document.getText(range);
-      const item = items.find(
-        (entry) =>
-          (typeof entry.label === 'string'
-            ? entry.label
-            : entry.label.label) === word
-      );
+      const item = items.find((entry) => {
+        const label =
+          typeof entry.label === 'string' ? entry.label : entry.label.label;
+        return label === word;
+      });
       if (!item?.doc) return;
 
       return new Hover(item.doc, range);
