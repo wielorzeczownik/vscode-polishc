@@ -65,8 +65,9 @@ function createClangdClient(
           );
           const word = range ? document.getText(range) : undefined;
           const isPolishKeyword = items.some((entry) => {
+            const entryLabel = entry.label;
             const label =
-              typeof entry.label === 'string' ? entry.label : entry.label.label;
+              typeof entryLabel === 'string' ? entryLabel : entryLabel.label;
             return label === word;
           });
           // clangd nie zna polskich słów kluczowych

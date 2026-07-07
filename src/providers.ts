@@ -35,8 +35,9 @@ export function registerHoverProvider() {
 
       const word = document.getText(range);
       const item = items.find((entry) => {
+        const entryLabel = entry.label;
         const label =
-          typeof entry.label === 'string' ? entry.label : entry.label.label;
+          typeof entryLabel === 'string' ? entryLabel : entryLabel.label;
         return label === word;
       });
       if (!item?.doc) return;
