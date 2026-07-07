@@ -61,7 +61,7 @@
     "@vscode/vsce": "3.9.2",
     "@types/node": "26.0.0",
     "@types/vscode": "1.125.0",
-    "eslint": "10.5.0",
+    "eslint": "10.6.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-simple-import-sort": "13.0.0",
     "eslint-plugin-sonarjs": "4.1.0",
