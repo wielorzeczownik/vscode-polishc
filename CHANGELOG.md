@@ -5,7 +5,7 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.1.10](https://github.com/wielorzeczownik/vscode-polishc/compare/v0.1.9...v0.1.10) - 2026-07-07
 
 ### Bug Fixes
 
@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### CI/CD
 
+- Add changelog, build attestations and SHA-256 checksums to releases ([7645d27](https://github.com/wielorzeczownik/vscode-polishc/commit/7645d27a50869bd11b9494a839e31ba216ea9f7e))
 - Update actions/checkout action to v7 ([e68bda9](https://github.com/wielorzeczownik/vscode-polishc/commit/e68bda99edb3d849b4d15f8f4ccfa16eef3533be))
 
 ## [0.1.9](https://github.com/wielorzeczownik/vscode-polishc/compare/v0.1.8...v0.1.9) - 2026-06-22
