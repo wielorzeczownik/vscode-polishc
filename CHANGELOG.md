@@ -5,6 +5,25 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.11](https://github.com/wielorzeczownik/vscode-polishc/compare/v0.1.10...v0.1.11) - 2026-07-07
+
+### Build System
+
+- Update dependency prettier to v3.9.4 ([d88599c](https://github.com/wielorzeczownik/vscode-polishc/commit/d88599c6ec6564476a8b7c5b6d9d41dd0a37723c))
+- Update dependency vite to v8.1.3 ([f59160b](https://github.com/wielorzeczownik/vscode-polishc/commit/f59160b2301d299ba8a6d752221a601d05bdd0ea))
+- Update dependency @types/node to v26.1.0 ([bd60fc1](https://github.com/wielorzeczownik/vscode-polishc/commit/bd60fc13724b76c3e9024890f60a794dd555bb3e))
+- Update dependency eslint to v10.6.0 ([f3e521c](https://github.com/wielorzeczownik/vscode-polishc/commit/f3e521cd56dfc594e0c2b15a55734a87b80224a7))
+- Update dependency typescript-eslint to v8.62.1 ([5442e5f](https://github.com/wielorzeczownik/vscode-polishc/commit/5442e5fa4e8070beeea5e2bc2a5ce70d7ce565d7))
+
+### CI/CD
+
+- Update softprops/action-gh-release action to v3.0.1 ([5a3115c](https://github.com/wielorzeczownik/vscode-polishc/commit/5a3115cb91ee342cfe8902fe6979a6bc0ab60de0))
+- Exclude generated CHANGELOG.md from markdownlint ([9b3bf9d](https://github.com/wielorzeczownik/vscode-polishc/commit/9b3bf9da6f2ebdc877b0929eabc89c5101c4ac39))
+
+### Dependencies
+
+- Update dependency vscode-languageclient to v10.1.0 (#74) ([33792f6](https://github.com/wielorzeczownik/vscode-polishc/commit/33792f602a7b5ef2ad99a4786a11fcfce2d94ce2))
+
 ## [0.1.10](https://github.com/wielorzeczownik/vscode-polishc/compare/v0.1.9...v0.1.10) - 2026-07-07
 
 ### Bug Fixes
