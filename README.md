@@ -11,8 +11,11 @@
 Rozszerzenie VS Code dla Polish C <s>dialektu</s> wariantu języka C z polskimi słowami kluczowymi.<br/>
 Podświetlanie składni, autouzupełnianie, dokumentacja inline, podpowiedzi parametrów i integracja z clangd.
 
-> [!NOTE]
-> Ten projekt jest ciekawostką – powstał dla zabawy i raczej nie będzie aktywnie rozwijany. Działa, robi co ma robić, zależności są aktualizowane automatycznie przez Renovate. PR-y mile widziane, ale bez gwarancji szybkiej reakcji.
+> [!IMPORTANT]
+> **Repozytorium zostaje zarchiwizowane.**
+> Po wyczerpujących **4 miesiącach** intensywnego nierobienia przy nim absolutnie niczego, z dumą ogłaszam, że... dalej nie będę przy nim nic robił – tyle że teraz oficjalnie.
+>
+> Rozszerzenie działa, więc nie ma czego naprawiać. Ostatnią istotą wykazującą w tym repo jakąkolwiek aktywność był bot Renovate, który dzielnie aktualizował zależności rozszerzenia, którego nikt już nie dotykał. Szanujmy jego poświęcenie. 🫡
 
 ## Czym jest Polish C?
 
