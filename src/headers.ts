@@ -2,7 +2,8 @@ import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import https from 'node:https';
 import path from 'node:path';
 
-import { HEADERS, REPO_RAW } from '@/constants';
+const REPO_RAW = 'https://raw.githubusercontent.com/npc-tom/polishc/main';
+const HEADERS = ['polishc.h', 'polishc_stdio.h', 'polishc_diacritics.h'];
 
 function fetchText(url: string): Promise<string> {
   return new Promise((resolve, reject) => {

@@ -1,7 +1,23 @@
-import { CompletionItemKind } from 'vscode';
+import { CompletionItemKind, type MarkdownString } from 'vscode';
 
 import { makeMarkdown } from '@/type-translator';
-import type { CompletionEntry, SignatureEntry } from '@/types';
+
+interface CompletionEntry {
+  label: string | { label: string; detail?: string; description?: string };
+  kind: CompletionItemKind;
+  doc?: MarkdownString;
+}
+
+interface SignatureParameter {
+  label: string;
+  doc: string;
+}
+
+interface SignatureEntry {
+  label: string;
+  doc: string;
+  params: SignatureParameter[];
+}
 
 const Kind = CompletionItemKind;
 

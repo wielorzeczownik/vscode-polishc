@@ -4,7 +4,16 @@ import {
   SignatureInformation,
 } from 'vscode';
 
-import { TYPE_MAP } from '@/constants';
+const TYPE_MAP: [RegExp, string][] = [
+  [/\blong long\b/g, 'długa długa'],
+  [/\blong\b/g, 'długa'],
+  [/\bint\b/g, 'calkowita'],
+  [/\bfloat\b/g, 'zmiennoprzecinkowa'],
+  [/\bdouble\b/g, 'zmiennoprzecinkowaalewiększa'],
+  [/\bchar\b/g, 'znak'],
+  [/\bvoid\b/g, 'nic'],
+  [/\bbool\b/g, 'prawdaczyfalsz'],
+];
 
 export function makeMarkdown(text: string): MarkdownString {
   const markdown = new MarkdownString(text);

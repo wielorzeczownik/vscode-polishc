@@ -11,18 +11,17 @@ import {
 import { LanguageClient, type ServerOptions } from 'vscode-languageclient/node';
 
 import { items } from '@/completion-data';
-import {
-  CLANGD_CANDIDATES,
-  CLANGD_CLIENT_ID,
-  CLANGD_CLIENT_NAME,
-  CLANGD_FILE_WATCHER,
-  LANGUAGE_ID,
-} from '@/constants';
+import { LANGUAGE_ID } from '@/constants';
 import {
   translateHoverContent,
   translateItem,
   translateSignature,
 } from '@/type-translator';
+
+const CLANGD_CLIENT_ID = 'polishc-clangd';
+const CLANGD_CLIENT_NAME = 'Polish C (clangd)';
+const CLANGD_FILE_WATCHER = '**/*.{c,h,pc}';
+const CLANGD_CANDIDATES = ['clangd', 'clangd-18', 'clangd-17', 'clangd-16'];
 
 function findClangd(): string | undefined {
   for (const command of CLANGD_CANDIDATES) {
